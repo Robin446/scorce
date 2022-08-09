@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <!-- Begin Page Header-->
+    <div class="row">
+    <div class="page-header">
+    <div class="d-flex align-items-center">
+    <span class="page-header-title">Send Broadcast Messages To Any Numbers Without Saving Number. <br><span style="color:red;"> Note </span><br>1 .Send Broadcast Messages Can Leads Your Number Blocking Issue (If User Report). We Suggest Send Broadcast With Quick Reply Button 
+    <br>
+    2. When Do Broadcast Make Sure Your Targeted Number Is Avaviable On Whatsapp (Filter Your Number Before Broadcast)</span>
+    
+    <div>
+    
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Sender -->
+    
+    <!-- Message -->
+    
+    <div class="widget has-shadow">
+    <div class="widget-header bordered no-actions d-flex align-items-center">
+    <h4>Send Broadcast Message</h4>
+    </div>
+    <div class="widget-body">
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validatecampaingn(this);">
+    <div class="form-group">
+    <label for="seeAnotherFieldGroup">Select Combination From Below List</label>
+    <select class="form-control" id="seeAnotherFieldGroup">
+    <option value="">Select Combination </option>
+    <option value="1"> Text Messages </option>
+    <option value="2">Text &amp; Media Messages  </option>
+    <option value="3">Quick Reply Button Messages  </option>
+    <option value="4"> Call-To-Action Button Messages  </option>
+    <option value="5">Quick Reply Button Messages With Media </option>
+    <option value="6"> Call-To-Action Button Messages With Media </option>
+    </select>
+    </div>
+    
+    <div class="form-group" id="otherFieldGroupDiv" style="">
+    
+    <label for="keyword">Instance</label>
+    <input type="text" name="instance" value=" " class="form-control w-100" id="keyword" readonly="" required="required" data-error="This field is required.">
+    <br>
+    
+    
+    <label for="keyword"> Target Number</label>
+    <br>
+    <textarea name="number" required="" class="form-control" onkeyup="countline()" id="mobileno" onblur="this.value=RemoveSpaces(this.value);"></textarea>
+    
+    <h9 style="color:red;">Numbers Follow By Comma ex. 91xxxxxxxx,91xxxxxxxx,91xxxxxxxx (Number Must With County Code)</h9>
+    <p class="small-text mb-0 font-italic">*Add Comma From In Your Number <a href="https://delim.co/#" target="_blank">here</a> </p>
+    
+    <br>
+    <label for="form-control-6">Number Count</label>
+      <input type="text" readonly="" name="num_count" id="numbercount" class="form-control">
+    
+    
+    <br>
+    
+    
+    
+    <label for="response">Messages</label>
+    
+    
+    <select class="form-control js-example-basic-multiple" name="msg" style="width: 100%" onchange="DropDownChanged(this);">
+    <option value="" selected="">Select Message Or Enter Message Manually</option>
+    <option value="">Type Message Manually...</option>
+    
+    
+    
+    
+    </select>
+    
+    <br>
+    <textarea type="text" name="msgx" class="form-control w-100" style="display: none;"></textarea>
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    <div class="form-group" id="otherFieldGroupDiv2" style="">
+    
+    <!--    <label for="keyword">KeyWord</label>-->
+    <!--    <input type="text" name ="keyword" class="form-control w-100" id="keyword">-->
+    <!--<br>-->
+    <!--    <label for="response">Response</label>-->
+    <!--    <textarea type="text" name ="response" class="form-control w-100" id="response"></textarea>-->
+    
+    
+    
+    
+    <label for="media"> Media </label>
+    <em style="color:red;font-size:10px">*support jpg dan pdf. Max 1 Mb</em>
+    <input type="file" name="media" class="form-control" id="media" required="required" data-error="This field is required.">
+    </div>
+    
+    <div class="form-group" id="otherFieldGroupDiv3" style="display: none;">
+    <div class="row align-items-start">
+    <div class="col">
+    
+    <label for="btn1"> Button 1 </label>
+    <select class="form-control js-example-basic-multiple" name="btn1" style="width: 100%">
+    <option value="" selected="">Select Button</option>
+    
+    </select>
+    <br>
+    </div>
+    <div class="col">
+    <label for="btn2"> Button 2 (optional)</label>
+    <select class="form-control js-example-basic-multiple" name="btn2" style="width: 100%">
+    <option value="" selected="">Select Button</option>
+    
+    </select>
+    </div>
+    </div>
+    
+    
+    <label for="btn3"> Button 3 (optional)</label>
+    <select class="form-control js-example-basic-multiple" name="btn3" style="width: 100%">
+    <option value="" selected="">Select Button</option>
+    
+    </select>
+    <br>
+    <label for="btn3"> Footer Text </label>
+    <select class="form-control js-example-basic-multiple" name="footerTextx" style="width: 100%">
+    <option value="" selected="">Select Footer Text</option>
+    
+    </select>
+    <br>
+    
+    
+    </div>
+    <div class="form-group" id="otherFieldGroupDiv4" style="display: none;">
+    
+    
+    <div class="form-group" id="otherFieldGroupDiv4">
+    
+    
+    <br>
+    <div class="row align-items-start">
+    <div class="col">
+    
+    <label for="callnumber"> Call Button Text </label>
+    <select class="form-control js-example-basic-multiple" name="callbtnText" style="width: 100%">
+    <option value="" selected="">Select Call Button Text</option>
+    
+    </select>
+    
+    <br>
+    </div>
+    <div class="col">
+    <label for="callnumber">Calling Number </label>
+    <input type="text" name="callnumber" class="form-control" id="weburl">
+    <br>
+    </div> </div>
+    
+    <div class="row align-items-start">
+    <div class="col">
+    
+    <label for="callnumber"> Web URL Button Text </label>
+    <select class="form-control js-example-basic-multiple" name="urlbtnText" style="width: 100%">
+    <option value="" selected="">Select Web URL Button Text</option>
+    
+    </select>
+    
+    <br>
+    </div>
+    <div class="col">
+    <label for="weburl"> Web URL </label>
+    <input type="text" name="weburl" class="form-control" id="weburl">
+    <br>
+    </div>
+    </div>
+    
+    
+    
+    <label for="weburl"> Footer Text </label>
+    <select class="form-control js-example-basic-multiple" name="footerText" style="width: 100%">
+    <option value="" selected="">Select Footer Text</option>
+    
+    </select>
+    <br>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </form></div>
+    <div class="modal-footer">
+       <button id="submit" type="submit" class="btn btn-success">Save</button> 
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    </div>
+    </div>
